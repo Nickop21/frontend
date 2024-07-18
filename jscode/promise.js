@@ -40,7 +40,7 @@ function createOrder(cart) {
     }
   });
 
-  return pr;
+  return pr ;
 }
 
 function proceedToPayment(orderID) {
