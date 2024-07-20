@@ -11,7 +11,7 @@ const promise2=new Promise((resolve, reject) => {
     ,2000)
 })
 const promise3=new Promise((resolve, reject) => {
-    setTimeout(()=>reject("promise 3 failed")
+    setTimeout(()=>resolve("promise 3 resolve")
 
     ,1000)
 })
