@@ -115,3 +115,58 @@ Function.prototype.mybind=function (context={},...args) {
 
 let mybindcall=getFullName1.mybind(callobj,"my bind")
 mybindcall()
+
+//once -- The once function can be useful to ensure that a particular function is executed only once. 
+
+function once(fun,context) {
+    let ran=false;
+    
+    return function(...args) {
+        if (!ran) {
+            ran = true ;
+           return fun.apply(context||this, args);
+            // console.log("cd");
+        }
+       
+    }
+}
+function greet(name) {
+    return name
+    // console.log(`Hello, ${name}!`);
+}
+
+let onceFunc=once(greet);
+
+// onceFunc(["ntin","yada"]);
+console.log(onceFunc("nicked"));
+onceFunc("yadav");
+
+// memoize
+
+function myMemoize(fn,context) {
+    const res={}
+    return function(...args) {
+        var argsCached=JSON.stringify(args)
+        if (!res[argsCached]) {
+            res[argsCached]=fn.call(context||this, ...args)
+        }
+
+        return res[argsCached];
+    }   
+}
+
+const clusmyProduct=(num1,num2)=>{
+    for (let index = 1; index < 1000000; index++) {
+    }
+    return num1+num2
+}
+
+let memoizeClumsyProduct=myMemoize(clusmyProduct)
+
+console.time("first run");
+console.log(memoizeClumsyProduct(123, 742)); // Output: 865
+console.timeEnd("first run"); //same log as time for time end
+
+console.time("second run");
+console.log(memoizeClumsyProduct(123, 742)); // Output: 865
+console.timeEnd("second run");
