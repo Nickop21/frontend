@@ -20,12 +20,12 @@ var a = 100;
 
 // let an = 200;
 // {
-//  var an =20;  //cannot reclared illegal shadowing
+//  var an =20;  //cannot reclared illegal shadowing beacuse var is function scoped not block scoped
 // }
 
 let aaa=99
 function sha(){
-    var aaa=9999  // this is legal 
+    var aaa=9999  // this is legal  because aaa is function scoped
 }
 // We can shadow this
 var ap = 200;

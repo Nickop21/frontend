@@ -31,3 +31,8 @@ function getname() {
 
 console.log("Hositing ends");
 
+// console.log(nn);
+let nn=9
+console.log(nn);
+
+
