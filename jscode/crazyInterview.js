@@ -34,7 +34,7 @@ counter2() //give acces to counter with new independent copy of (fresh counter)
 // console.log(counter); // not defined  (not acceable)
 
 
-// best way 
+// best way bu making constructor function
 
     function Datahiding2(){
         let counter=0
@@ -46,7 +46,8 @@ counter2() //give acces to counter with new independent copy of (fresh counter)
         }
        
     }
- let data=new Datahiding2()
+    // this.increament1 and this.dcreament1 are methods 
+ let data=new Datahiding2() // new obj
     data.increament1()
 
     //disadvantage of clouser 
