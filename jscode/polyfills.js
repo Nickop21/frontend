@@ -22,7 +22,7 @@ let filterarray=[12,5,81,2,9,5,22,34,68,21]
 Array.prototype.myFilter=function (cb) {
     let temp=[]
 for (let index = 0; index < this.length; index++) {
-    if(cb(this[index],index,this)) temp.push(cb(this[index]))
+    if(cb(this[index],index,this)) temp.push(cb(this[index])) 
     // in if we invole the function and check where it satified the comditon or not
 }
     return temp;
@@ -48,9 +48,7 @@ for (let index = 0; index < this.length; index++) {
     return acc;
 }
 
-let reducearr=sumarray.myreduce((acc,curr,i,arr)=>{
-        return acc+curr
-},0)
+
 
 console.log(reducearr);
 
