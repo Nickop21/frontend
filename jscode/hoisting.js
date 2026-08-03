@@ -24,6 +24,8 @@ var getsomthing=()=>{
 var hos=function varfun() {
     console.log("var func");
 }
+console.log(hos);
+
 
 function getname() {
   console.log("execution context");  
@@ -36,3 +38,4 @@ let nn=9
 console.log(nn);
 
 
+console.log(getname);
