@@ -18,11 +18,11 @@ const promise3=new Promise((resolve, reject) => {
 
 Promise.all([promise1, promise2,promise3]).then((res)=>(console.log(res)))
 .catch((error) =>(console.log(error)))
-// when every promise rejected at any point its simply returns error
+// when every promise rejected at any point its simply returns error go to catch 
 
 Promise.allSettled([promise1, promise2,promise3]).then((res)=>(console.log(res)))
 .catch((error) =>(console.log(error)))
-// wait for all the promise to settled
+// wait for all the promise to settled return [arr1,arr2,arr3]
 
 Promise.race([promise1, promise2, promise3]).then((res)=>{console.log(res)})
 .catch((error) =>(console.log(error))) 
